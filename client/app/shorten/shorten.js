@@ -10,9 +10,11 @@ angular.module('shortly.shorten', [])
       console.log("logging addlink Response data")
       console.log(res);
       return res.data.link;
-    }).then() {
+    }).then(function() {
       $location.path('/links');
-    }
+    });
+      
+    
 
 
   };
