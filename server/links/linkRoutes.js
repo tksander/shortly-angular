@@ -1,7 +1,9 @@
 var linksController = require('./linkController.js');
 
 module.exports = function (app) {
+  
   console.log(app.route);
+
   // app === linkRouter injected from middleware.js
 
   // app.param will hijack any request with a 'code' parameter on in

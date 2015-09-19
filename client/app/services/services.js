@@ -4,15 +4,18 @@ angular.module('shortly.services', [])
 
   var retrieveLinks = function () {
     console.log("retrieveLinks called");
+
     return $http.get('/api/links');
   };
 
   var addLink = function (link) {
+
     console.log('Inside Addlink on Services.js');
     return $http({
       method: 'POST',
       url: '/api/links',
       data: link.toString() // Is this the data we should send?
+
     });
   };
 

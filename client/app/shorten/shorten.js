@@ -4,6 +4,7 @@ angular.module('shortly.shorten', [])
   $scope.link = {};
 
   $scope.postLink = function () {
+
     //we need to "shortly-ify" the link, too - before we add it? TS: I think we do this serverside - check on this. 
     Links.addLink($scope.data.link).then( function (res) {
       console.log("logging addlink Response data")
@@ -12,6 +13,7 @@ angular.module('shortly.shorten', [])
     });
 
     // $location.path('/links');
+
   };
 
 //WE GO THROUGH LINKROUTES.JS TO LINKCONTROLLER.JS. FOLLOW THIS PATH.

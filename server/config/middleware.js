@@ -25,5 +25,7 @@ module.exports = function (app, express) {
   // inject our routers into their respective route files
   require('../users/userRoutes.js')(userRouter);
   require('../links/linkRoutes.js')(linkRouter);
+
   console.log("Middleware is loaded");
+
 };

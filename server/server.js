@@ -1,6 +1,9 @@
 var express = require('express');
 var mongoose = require('mongoose');
+<<<<<<< HEAD
 console.log("Serve is up")
+=======
+>>>>>>> 30cdef64a597d22587d23fe6429f5f27ce8cfa2d
 
 var app = express();
 

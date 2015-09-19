@@ -21,7 +21,9 @@ module.exports = {
   },
 
   allLinks: function (req, res, next) {
+
     console.log("Getting alllinks on serverside")
+
   var findAll = Q.nbind(Link.find, Link);
 
   findAll({})
@@ -34,7 +36,9 @@ module.exports = {
   },
 
   newLink: function (req, res, next) {
+
     console.log("creating newlink on serverside")
+
     var url = req.body.url;
     console.log(req.body);
     if (!util.isValidUrl(url)) {
