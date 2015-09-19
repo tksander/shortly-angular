@@ -37,10 +37,11 @@ module.exports = {
 
   newLink: function (req, res, next) {
 
-    console.log("creating newlink on serverside")
+    console.log("creating newlink on serverside ", req.body.url);
+    console.log(req.headers.origin)
 
     var url = req.body.url;
-    console.log(req.body);
+    
     if (!util.isValidUrl(url)) {
       return next(new Error('Not a valid url'));
     }

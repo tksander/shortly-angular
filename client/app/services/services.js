@@ -10,13 +10,18 @@ angular.module('shortly.services', [])
 
   var addLink = function (link) {
 
+    console.log("link:  ", link);
     console.log('Inside Addlink on Services.js');
-    return $http({
-      method: 'POST',
-      url: '/api/links',
-      data: link.toString() // Is this the data we should send?
 
-    });
+    return $http.post('/api/links', {url: link});
+
+
+    // return $http({
+    //   method: 'POST',
+    //   url: '/api/links',
+    //   data: link // Is this the data we should send?
+    // });
+
   };
 
   return {
