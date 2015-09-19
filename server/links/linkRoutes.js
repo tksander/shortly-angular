@@ -9,7 +9,7 @@ module.exports = function (app) {
   // req.navLink before it reaches line 16.
   app.param('code', linksController.findUrl);
 
-  app.route('/')
+  app.route('/') // OUR COMMENT: the url for the links page. The app already has our "api/links/". Let's console.log app here?
     .get(linksController.allLinks)
     .post(linksController.newLink);
 

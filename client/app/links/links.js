@@ -8,10 +8,11 @@ angular.module('shortly.links', [])
     //we need to chain the promise here because the get request is asynchronous. The "then" would never execute in the factory.
       Links.retrieveLinks().then( function (res) {
         $scope.data.links = res.data;
+        $scope.link = "www.buzzfeed.com";
+        console.log(res);
     });
   };
   $scope.getLinks();
-  //console.log($scope.data.links);
 });
 
 //Our factory is located in services.js

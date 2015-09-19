@@ -10,6 +10,10 @@ var LinkSchema = new mongoose.Schema({
  url: String
 });
 
+//code === the shortend url
+//url === the entered website
+//what is the difference between url and link?
+
 var createSha = function (url) {
   var shasum = crypto.createHash('sha1');
   shasum.update(url);

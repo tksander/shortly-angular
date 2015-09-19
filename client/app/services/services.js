@@ -7,12 +7,11 @@ angular.module('shortly.services', [])
   };
 
   var addLink = function (link) {
+    console.log('are we going to post?');
     return $http({
       method: 'POST',
       url: '/api/links',
       data: link
-    }).then(function (res) {
-      return res.data.link;
     });
   };
 
