@@ -10,14 +10,17 @@ angular.module('shortly.links', [])
   $scope.getLinks = function () {
     //we need to chain the promise here because the get request is asynchronous. The "then" would never execute in the factory.
       Links.retrieveLinks().then( function (res) {
-
-        console.log("Inside retrieveLinks in links.js")
+        console.log('res.data in retrievelinks')
+        console.log(res.data);
         $scope.data.links = res.data;
 
         console.log(res);
-    });
+       })
+      .catch(function (err) {
+        console.error(err);
+      });
   };
-  $scope.getLinks();
+  $scope.getLinks(); 
 });
 
 

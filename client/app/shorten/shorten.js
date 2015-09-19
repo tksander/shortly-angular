@@ -12,6 +12,9 @@ angular.module('shortly.shorten', [])
       return res.data.link;
     }).then(function() {
       $location.path('/links');
+    })
+    .catch(function (err) {
+      console.error(err);
     });
       
     

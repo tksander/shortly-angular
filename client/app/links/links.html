@@ -1,7 +1,12 @@
 <div id='container'>
     <h2>My Links!<h2>
       <ul> 
-        <ul> {{ data.links }} </ul> 
-        <ul> {{ link }} </ul>
+
+        <ul ng-repeat="linkObj in data.links | filter:search | orderBy:'created_at'">
+          {{ linkObj.title }} {{ linkObj.url }}
+          <a href="{{ linkObj.base_url }}/api/links/{{ linkObj.code }}">Shortend URL:</a>
+          Number visits: {{ linkObj.visits }}
+        </ul> 
+
       </ul>
 </div>
